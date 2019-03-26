@@ -110,6 +110,63 @@ public class DataTypesDemo {
 		System.out.println("min value of character variable is " + Character.MIN_VALUE);
 		System.out.println("max value of character variable is " + Character.MAX_VALUE);
 		System.out.println("************************************************");
+
+		// up casting
+		short shL = 12345;
+		int iH = shL;
+		System.out.println(iH);
+
+		int iL = 123456;
+		float fh = iL;
+		System.out.println(fh);
+
+		// down casting
+		// lower_data_type var_name = (lower_data_type) higher_data_type_var_name
+
+		short sH = 120;
+		byte bL = (byte) sH;
+		System.out.println(bL);
+
+		float ftH = 12.99f;
+		int inL = (int) ftH;
+		System.out.println(inL);
+
+		// primitive to reference
+		int ip = 1234;
+		String iS = Integer.toString(ip);
+		System.out.println(iS + 20);
+
+		double dp = 123.44;
+		String dS = Double.toString(dp);
+		System.out.println(dS + 10);
+
+		String bs = Boolean.toString(b);
+//		System.out.println(b+10);
+		System.out.println(bs + 10);
+
+		// reference to primitive
+		String sr = "18977";
+		int intp = Integer.parseInt(sr);
+		System.out.println(intp + 10);
+
+		String st = "32447.89";
+		float flp = Float.parseFloat(st);
+		int inf = (int) flp;
+		System.out.println(flp + 10);
+		System.out.println(inf);
+		
+		//primitive to wrapper
+		ip = 9876;
+		Integer iw = Integer.valueOf(ip);
+		System.out.println(iw);
+		
+		
+		//wrapper to primitive
+		Float fw = new Float(344.77f);
+		float fp = fw.floatValue();
+		System.out.println(fp);
+		
+
 	}
 
 }
