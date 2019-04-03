@@ -56,30 +56,43 @@ public class ArraysDemo {
 		marks[2] = 24;
 		marks[3] = 17;
 		marks[4] = 20;
-//		marks[5] = 21;
+		marks[5] = 21;
 
 		// find the nubmer of elements in an array
 		System.out.println(marks.length);
 
 		// retrieve the data from the array
-		System.out.println(marks[0]);
-		System.out.println(marks[1]);
-		System.out.println(marks[2]);
-		System.out.println(marks[3]);
-		System.out.println(marks[4]);
-		System.out.println(marks[5]);
+//		System.out.println(marks[0]);
+//		System.out.println(marks[1]);
+//		System.out.println(marks[2]);
+//		System.out.println(marks[3]);
+//		System.out.println(marks[4]);
+//		System.out.println(marks[5]);
 //		System.out.println(marks[6]);
+		
+		System.out.println("printing marks values using for each loop");
+		for(int mark : marks) {
+			System.out.println(mark);
+		}
 
+		System.out.println("printing marks values using for loop");
+		for(int i = 0; i<marks.length; i++) {
+			System.out.println(marks[i]);
+		}
 		// initialize 1D array
 		double[] percentages = { 7.6, 8.1, 7.9, 6.8, 8.3, 9.1 };
 		System.out.println(percentages.length);
 
-		System.out.println(percentages[0]);
-		System.out.println(percentages[1]);
-		System.out.println(percentages[2]);
-		System.out.println(percentages[3]);
-		System.out.println(percentages[4]);
-		System.out.println(percentages[5]);
+//		System.out.println(percentages[0]);
+//		System.out.println(percentages[1]);
+//		System.out.println(percentages[2]);
+//		System.out.println(percentages[3]);
+//		System.out.println(percentages[4]);
+//		System.out.println(percentages[5]);
+		
+		for(double percentage : percentages) {
+			System.out.println(percentage);
+		}
 
 		// declare a 2D array
 		int[][] matrix1 = new int[2][2];
