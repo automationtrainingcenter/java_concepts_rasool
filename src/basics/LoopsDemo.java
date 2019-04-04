@@ -56,30 +56,29 @@ public class LoopsDemo {
 		Scanner s = new Scanner(System.in);
 		// while loop to print even number until 10 from 0
 		// initialization
-//		int i = 0;
-//		//condition
-//		while(i < 10) {
-//			if(i % 2 == 0) {
-//				System.out.println(i);
-//			}
-//			//increment
-//			i++;
-//		}
-//		
-//		// read the numbers from the console until the number is divisible of 5
-//		int num;
-//		do {
-//			System.out.println("enter a number");
-//			num = s.nextInt();
-//		}while(num % 5 != 0);
-//		
-//		
-//		// print multiples of a given number from 1 to that number
-//		System.out.println("enter a number to print multiples");
-//		int n = s.nextInt();
-//		for(int j = 1; j <= n; j++) {
-//			System.out.println(j*n);
-//		}
+		int i = 0;
+		// condition
+		while (i < 10) {
+			if (i % 2 == 0) {
+				System.out.println(i);
+			}
+			// increment
+			i++;
+		}
+
+		// read the numbers from the console until the number is divisible of 5
+		int num;
+		do {
+			System.out.println("enter a number");
+			num = s.nextInt();
+		} while (num % 5 != 0);
+
+		// print multiples of a given number from 1 to that number
+		System.out.println("enter a number to print multiples");
+		int n = s.nextInt();
+		for (int j = 1; j <= n; j++) {
+			System.out.println(j * n);
+		}
 
 		// verify given number is prime number or not
 		System.out.println("enter a nubmer to verify prime or not");
@@ -102,12 +101,49 @@ public class LoopsDemo {
 		for (char vowel : vowels) {
 			System.out.println(vowel);
 		}
-		
-		String[] names = {"vasu", "rasool", "jyothi", "navya", "harish", "tarun", "satish", "venkat", "kala"};
-		for(String name : names) {
-			System.out.println(name+ " contains " +name.length()+" characters");
+
+		String[] names = { "vasu", "rasool", "jyothi", "navya", "harish", "tarun", "satish", "venkat", "kala" };
+		for (String name : names) {
+			System.out.println(name + " contains " + name.length() + " characters");
 		}
-		
+
+		// print prime numbers until given number
+		System.out.println("enter a number");
+		int range = s.nextInt();
+
+		for (int number = 2; number <= range; number++) {
+			boolean status = true;
+			for (int k = 2; k <= number / 2; k++) {
+				if (number % k == 0) {
+					status = false;
+					break; // inner for loop i.e k loop
+				}
+			}
+			if (status) {
+				System.out.print(number + "\t");
+			}
+		}
+
+		// break statement demo
+		j = 0;
+		while (j < 10) {
+			System.out.println(j);
+			j++;
+			if (j == 5) {
+				break;
+			}
+		}
+
+		// continue statement demo
+		j = 0;
+		while (j < 10) {
+			j++;
+			if (j == 5) {
+				continue;
+			}
+			System.out.println(j);
+		}
+
 	}
 
 }

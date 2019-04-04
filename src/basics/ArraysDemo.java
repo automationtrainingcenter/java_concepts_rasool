@@ -69,14 +69,14 @@ public class ArraysDemo {
 //		System.out.println(marks[4]);
 //		System.out.println(marks[5]);
 //		System.out.println(marks[6]);
-		
+
 		System.out.println("printing marks values using for each loop");
-		for(int mark : marks) {
+		for (int mark : marks) {
 			System.out.println(mark);
 		}
 
 		System.out.println("printing marks values using for loop");
-		for(int i = 0; i<marks.length; i++) {
+		for (int i = 0; i < marks.length; i++) {
 			System.out.println(marks[i]);
 		}
 		// initialize 1D array
@@ -89,8 +89,8 @@ public class ArraysDemo {
 //		System.out.println(percentages[3]);
 //		System.out.println(percentages[4]);
 //		System.out.println(percentages[5]);
-		
-		for(double percentage : percentages) {
+
+		for (double percentage : percentages) {
 			System.out.println(percentage);
 		}
 
@@ -102,20 +102,33 @@ public class ArraysDemo {
 		matrix1[1][0] = 0;
 		matrix1[1][1] = 1;
 
-		System.out.print(matrix1[0][0] + "\t");
-		System.out.print(matrix1[0][1] + "\n");
-		System.out.print(matrix1[1][0] + "\t");
-		System.out.print(matrix1[1][1] + "\n");
+//		System.out.print(matrix1[0][0] + "\t");
+//		System.out.print(matrix1[0][1] + "\n");
+//		System.out.print(matrix1[1][0] + "\t");
+//		System.out.print(matrix1[1][1] + "\n");
+		for (int i = 0; i < 2; i++) {
+			for (int j = 0; j < 2; j++) {
+				System.out.print(matrix1[i][j]+"\t");
+			}
+			System.out.println();
+		}
 
 		int[][] matrix2 = { { 1, 2, 3 }, { 4, 5, 6 }, { 8, 9, 0 } };
-		System.out.print(matrix2[0][0] + "\t");
-		System.out.print(matrix2[0][1] + "\t");
-		System.out.print(matrix2[0][2] + "\n");
-		System.out.print(matrix2[1][0] + "\t");
-		System.out.print(matrix2[1][1] + "\t");
-		System.out.print(matrix2[1][2] + "\n");
-		System.out.print(matrix2[2][0] + "\t");
-		System.out.print(matrix2[2][1] + "\t");
-		System.out.print(matrix2[2][2] + "\n");
+//		System.out.print(matrix2[0][0] + "\t");
+//		System.out.print(matrix2[0][1] + "\t");
+//		System.out.print(matrix2[0][2] + "\n");
+//		System.out.print(matrix2[1][0] + "\t");
+//		System.out.print(matrix2[1][1] + "\t");
+//		System.out.print(matrix2[1][2] + "\n");
+//		System.out.print(matrix2[2][0] + "\t");
+//		System.out.print(matrix2[2][1] + "\t");
+//		System.out.print(matrix2[2][2] + "\n");
+
+		for (int r = 0; r < 3; r++) {
+			for (int c = 0; c < 3; c++) {
+				System.out.print(matrix2[r][c]+"\t");
+			}
+			System.out.println();
+		}
 	}
 }
