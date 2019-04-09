@@ -1,5 +1,7 @@
 package objectsandconstructors;
 
+import java.util.Scanner;
+
 /*
  * Constructor is a special method whose name is same as the class name.
  * Constructor doesn't have any explicit return type. Every Constructor will return reference(memory location) 
@@ -13,7 +15,8 @@ package objectsandconstructors;
  *  It will assign user defined values to the instance variables at the time of object creation 
  *  
  *  we can create n number of parameterized constructors either by changing the number of parameters, type 
- *  of parameters or sequence of parameters, this is known as constructor overloading
+ *  of parameters or sequence of parameters or type of parameters, 
+ *  this is known as constructor overloading
  *  
  * Java provides "this" keyword. "this" keyword always represents the current class instance.
  * which will differentiate instance variables with local variables.
@@ -30,7 +33,7 @@ public class ConstructorDemo {
 	long phNum;
 	double fee;
 
-	// default constructor
+//	// default constructor
 	public ConstructorDemo() {
 		System.out.println("creating object using default constructor");
 		id = 100;
@@ -40,13 +43,28 @@ public class ConstructorDemo {
 	}
 
 	// parameterized constructor
-	public ConstructorDemo(int i, String n, long ph, double f) {
+	public ConstructorDemo(int id, String name, long phNum, double fee) {
 		System.out.println("creating object using parameterized constructor");
-		id = i;
-		name = n;
-		phNum = ph;
-		fee = f;
+		this.id = id;
+		this.name = name;
+		this.phNum = phNum;
+		this.fee = fee;
 	}
+	
+	//changing the sequence of arguments
+	public ConstructorDemo(String name, long phNum, int id, double fee) {
+		this(id, name, phNum, fee);
+	}
+	
+	//changing the type of arguments
+	public ConstructorDemo(String name, String phNum, String id, String fee) {
+//		this.name = name;
+//		this.id = Integer.parseInt(id);
+//		this.phNum = Long.parseLong(phNum);
+//		this.fee = Double.parseDouble(fee);
+		this(name, Long.parseLong(phNum), Integer.parseInt(id), Double.parseDouble(fee));
+	}
+	
 	
 	public void display() {
 		System.out.println("*********************************************");
@@ -62,7 +80,6 @@ public class ConstructorDemo {
 		obj3.display();
 		ConstructorDemo obj4 = new ConstructorDemo(111, "ravi", 8888776655l, 8000.00);
 		obj4.display();
-		
 		
 		
 	}
