@@ -11,6 +11,9 @@ public class TestEmployee {
 		e2.display();
 		e1.display();
 		e3.display();
+		
+		e3.salary = 20000;
+		System.out.println(e3.salary);
 
 	}
 
