@@ -25,25 +25,43 @@ package inheritance;
  */
 
 public class InheritanceDemo {
-	
+
 	public static void main(String[] args) {
 		// single inheritance
-//		Parent pObj = new Parent();
-//		pObj.methodOne();
+		Parent pObj = new Parent();
+//		((ChildOne)pObj).methodTwo();
 		
+//		pObj.methodOne();
+
 //		ChildOne c1Obj = new ChildOne();
 //		c1Obj.methodTwo();
 //		c1Obj.methodOne(); //parent class
-		
-		//type conversions
+
+		// type conversions
 		Parent pcObj = new ChildOne();
 		pcObj.methodOne();
 //		ChildOne cObj =(ChildOne) pcObj;
 //		cObj.methodTwo();
-		((ChildOne)pcObj).methodTwo();
-		
-		
+		((ChildOne) pcObj).methodTwo();
+
 //		ChildOne cObj = new Parent();
+
+		// Multilevel inheritance
+		SubChild scObj = new SubChild();
+		scObj.methodThree();
+		scObj.methodTwo(); // ChildOne
+		scObj.methodOne(); // Parent
+
+		// hierarchical inheritance
+		ChildOne c1Obj = new ChildOne();
+		c1Obj.methodTwo(); // ChildOne
+		c1Obj.methodOne(); // Parent
+//		c1Obj.methodFour();
+
+		ChildTwo c2Obj = new ChildTwo();
+		c2Obj.methodFour(); // ChildTwo
+		c2Obj.methodOne(); // Parent
+//		c2Obj.methodTwo();
 	}
 
 }
