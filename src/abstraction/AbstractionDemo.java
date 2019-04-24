@@ -42,16 +42,39 @@ public class AbstractionDemo {
 
 	public static void main(String[] args) {
 		// abstraction demo
-		AbstractClass obj = new AbstractClassImpl();
-		obj.methodOne();
-		obj.methodTwo();
-		obj.methodThree();
+//		AbstractClass obj = new AbstractClassImpl();
+//		obj.methodOne();
+//		obj.methodTwo();
+//		obj.methodThree();
+//
+//		// interface demo
+//		InterfaceDemo iObj = new InterfaceImpl();
+//		iObj.methodOne();
+//		iObj.methodTwo();
+//		iObj.methodThree();
+		
+//		COne cObj = new COne();
+//		cObj.iOneMethod();
+//		cObj.iTwoMethod();
+		
+		IOne cObj = new COne();
+		cObj.iOneMethod();
+		//to call iTwoMethod of ITwo interface
+		ITwo c1 = (ITwo)cObj;
+		c1.iTwoMethod();
+//		((COne)cObj).iTwoMethod();
+		
+		
+		
+		//inner interfaces
+		Outer oiObj = new ImplementsOuterInner();
+		oiObj.methodOne();
+		// call inner interface method by type casting outer interface object reference 
+//		Outer.Inner iiObj = (Outer.Inner)oiObj;		
+//		Outer.Inner iiObj = oiObj.method();
+//		iiObj.methodTwo();
+		oiObj.method().methodTwo();
 
-		// interface demo
-		InterfaceDemo iObj = new InterfaceImpl();
-		iObj.methodOne();
-		iObj.methodTwo();
-		iObj.methodThree();
 	}
 
 }
