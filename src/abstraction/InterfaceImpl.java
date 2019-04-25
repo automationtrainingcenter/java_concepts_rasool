@@ -17,4 +17,9 @@ public class InterfaceImpl implements InterfaceDemo {
 		System.out.println("interface method three definition");
 	}
 
+	@Override
+	public void defaultMethod() {
+		System.out.println("default method of Inteface impl");
+	}
+
 }
